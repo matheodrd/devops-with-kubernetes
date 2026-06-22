@@ -1,5 +1,5 @@
 [project]
-name = "Log output"
+name = "log-output"
 version = "0.1.0"
 description = "Application that output logs"
 readme = "README.md"
