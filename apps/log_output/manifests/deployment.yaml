@@ -15,3 +15,6 @@ spec:
       containers:
         - name: "log-output"
           image: "registry:5111/log_output"
+          env:
+            - name: "PORT"
+              value: "8090"
