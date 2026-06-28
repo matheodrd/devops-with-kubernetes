@@ -6,10 +6,17 @@ spec:
   rules:
     - http:
         paths:
-          - path: "/"
+          - path: "/pingpong"
             pathType: "Prefix"
             backend:
               service:
                 name: "ping-pong"
                 port:
                   number: 1236
+          - path: "/status"
+            pathType: "Prefix"
+            backend:
+              service:
+                name: "log-output"
+                port:
+                  number: 1234
