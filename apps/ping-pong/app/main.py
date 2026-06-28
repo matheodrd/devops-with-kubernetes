@@ -22,7 +22,7 @@ def increment_counter(request: Request) -> int:
     return request.app.state.counter
 
 
-@app.get("/", response_class=PlainTextResponse)
+@app.get("/pingpong", response_class=PlainTextResponse)
 async def ping_pong(
     counter: Annotated[int, Depends(increment_counter)],
 ) -> str:
