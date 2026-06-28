@@ -11,3 +11,4 @@
 - [1.5.](https://github.com/matheodrd/devops-with-kubernetes/tree/1.5/apps/todo)
 - [1.6.](https://github.com/matheodrd/devops-with-kubernetes/tree/1.6/apps/todo)
 - [1.7.](https://github.com/matheodrd/devops-with-kubernetes/tree/1.7/apps/log_output)
+- [1.8.](https://github.com/matheodrd/devops-with-kubernetes/tree/1.8/apps/todo)
