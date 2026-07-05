@@ -12,9 +12,14 @@ spec:
       labels:
         app: "log-output"
     spec:
+      securityContext:
+        fsGroup: 10001
       volumes:
         - name: "shared-output"
           emptyDir: {}
+        - name: "shared-data"
+          persistentVolumeClaim:
+            claimName: "shared-data"
       containers:
         - name: "log-output-writer"
           image: "registry:5111/log-output-writer"
@@ -26,6 +31,8 @@ spec:
           volumeMounts:
             - name: "shared-output"
               mountPath: "/app/files"
+            - name: "shared-data"
+              mountPath: "/usr/share/data"
           env:
             - name: "PORT"
               value: "8090"
