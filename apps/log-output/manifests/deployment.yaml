@@ -12,9 +12,20 @@ spec:
       labels:
         app: "log-output"
     spec:
+      volumes:
+        - name: "shared-output"
+          emptyDir: {}
       containers:
-        - name: "log-output"
-          image: "registry:5111/log-output"
+        - name: "log-output-writer"
+          image: "registry:5111/log-output-writer"
+          volumeMounts:
+            - name: "shared-output"
+              mountPath: "/app/files"
+        - name: "log-output-server"
+          image: "registry:5111/log-output-server"
+          volumeMounts:
+            - name: "shared-output"
+              mountPath: "/app/files"
           env:
             - name: "PORT"
               value: "8090"
