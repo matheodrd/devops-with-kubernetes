@@ -124,7 +124,7 @@ wheels = [
 ]
 
 [[package]]
-name = "log-output"
+name = "log-output-server"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
