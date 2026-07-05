@@ -12,9 +12,18 @@ spec:
       labels:
         app: "ping-pong"
     spec:
+      securityContext:
+        fsGroup: 10001
+      volumes:
+        - name: "shared-data"
+          persistentVolumeClaim:
+            claimName: "shared-data"
       containers:
         - name: "ping-pong"
           image: "registry:5111/ping-pong"
+          volumeMounts:
+            - name: "shared-data"
+              mountPath: "/usr/share/data"
           env:
             - name: "PORT"
               value: "8095"
