@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo app</title>
+        <link rel="stylesheet" href="/static/css/vendor/simple.min.css" />
+    </head>
+    <body>
+        <main>
+            <h1 style="text-align: center; margin-top: 0">Todo App</h1>
+            <figure style="text-align: center; margin: auto">
+                <img
+                    src="/static/images/random.jpg"
+                    alt="random image"
+                    style="max-width: 25%; min-width: 150px; margin: auto"
+                />
+                <figcaption>DevOps with Kubernetes</figcaption>
+            </figure>
+
+            <div style="text-align: center; margin: auto">
+                <input
+                    type="text"
+                    name="new-todo"
+                    placeholder="Enter a new todo (max 140 characters)"
+                    maxlength="140"
+                />
+                <button type="submit">Send</button>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 15px">Todos</h3>
+            <ul>
+                {% for todo in todos %}
+                <li>{{ todo }}</li>
+                {% endfor %}
+                {% if not todos %}
+                <li>No todos</li>
+                {% endif %}
+            </ul>
+        </main>
+    </body>
+</html>
