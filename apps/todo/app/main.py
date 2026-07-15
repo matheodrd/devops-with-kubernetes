@@ -54,6 +54,11 @@ async def index(background_tasks: BackgroundTasks) -> HTMLResponse:
                     <img src="/static/images/random.jpg" alt="random image" style="max-width: 25%; min-width: 150px; margin: auto;">
                     <figcaption>DevOps with Kubernetes</figcaption>
                 </figure>
+
+                <div style="text-align: center; margin: auto;">
+                    <input type="text" name="new-todo" placeholder="Enter a new todo (max 140 characters)" maxlength="140" />
+                    <button type="submit">Send</button>
+                </div>
             </main>
         </body>
     </html>
