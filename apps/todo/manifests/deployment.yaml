@@ -12,9 +12,18 @@ spec:
       labels:
         app: "todo-app"
     spec:
+      securityContext:
+        fsGroup: 10001
+      volumes:
+        - name: "shared-data"
+          persistentVolumeClaim:
+            claimName: "shared-data"
       containers:
         - name: "todo-app"
           image: "registry:5111/todo-app"
+          volumeMounts:
+            - name: "shared-data"
+              mountPath: "/app/static/images"
           env:
             - name: "PORT"
               value: "8080"
