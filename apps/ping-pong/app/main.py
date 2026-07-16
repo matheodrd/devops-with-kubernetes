@@ -39,3 +39,8 @@ async def ping_pong(request: Request) -> str:
     await OUTPUT_FILE.write_text(str(current_count))
 
     return f"pong {current_count}"
+
+
+@app.get("/pings")
+async def pings(request: Request) -> dict[str, int]:
+    return {"data": request.app.state.counter}
