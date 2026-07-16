@@ -465,7 +465,7 @@ wheels = [
 ]
 
 [[package]]
-name = "todo"
+name = "todo-app"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
