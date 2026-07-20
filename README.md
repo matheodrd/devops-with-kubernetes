@@ -21,3 +21,4 @@
 ### Chapter 3
 
 - [2.1.](https://github.com/matheodrd/devops-with-kubernetes/tree/2.1/apps/)
+- [2.2.](https://github.com/matheodrd/devops-with-kubernetes/tree/2.2/apps/todo)
