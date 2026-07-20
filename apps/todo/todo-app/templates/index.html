@@ -19,13 +19,16 @@
             </figure>
 
             <div style="text-align: center; margin: auto">
-                <input
-                    type="text"
-                    name="new-todo"
-                    placeholder="Enter a new todo (max 140 characters)"
-                    maxlength="140"
-                />
-                <button type="submit">Send</button>
+                <form action="/todos" method="POST">
+                    <input
+                        type="text"
+                        name="todo"
+                        placeholder="Enter a new todo (max 140 characters)"
+                        maxlength="140"
+                        required
+                    />
+                    <button type="submit">Send</button>
+                </form>
             </div>
 
             <h3 style="text-align: center; margin-top: 15px">Todos</h3>
